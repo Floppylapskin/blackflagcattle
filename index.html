@@ -200,7 +200,7 @@
     }
 
     /* =========================
-       TRAFFIC COUNTER (ONLY NEW/CHANGED FEATURE)
+       TRAFFIC COUNTER 
        ========================= */
     .traffic-counter{
       margin-top:12px;
@@ -218,6 +218,23 @@
 
     .traffic-counter .label{ color: var(--red); }
     .traffic-counter .count{ color: var(--gold); }
+
+    /* --- FIX: force service descriptions to show --- */
+.grid .card p,
+.card p,
+p.muted {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  color: var(--muted) !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  margin-top: 8px !important;
+}
+
   </style>
 </head>
 
@@ -236,11 +253,11 @@
         </div>
 
         <div class="card">
-          <h1>Built for ranch life: clear ID, clean engraving, practical support.</h1>
+          <h1>Built for ranching life: clear ID, clean engraving, practical support.</h1>
           <p class="muted">
-            We place a <strong>heavy emphasis on custom cattle tags</strong>
+            We place a strong emphasis on custom cattle tags
             designed to read fast, stay consistent across your herd,
-            and hold up to real-world ranch conditions.
+            and hold up to real-world ranching conditions. 
           </p>
         </div>
       </section>
@@ -250,10 +267,10 @@
         <div class="section-title">Fees & Lead Times</div>
         <div class="card">
           <ul class="list muted">
-            <li><strong>$1.50 per side</strong> cattle tag engraving</li>
-            <li><strong>$50 design mock-up fee</strong> — valid forever</li>
+            <li><strong>$1.50 per side:</strong> cattle tag engraving</li>
+            <li><strong>$50 design mock-up fee:</strong> — valid forever</li>
             <li><strong>Lead time:</strong> 1–2 weeks depending on quantity</li>
-            <li><strong>All fees are plus the cost of tags</strong> — or bring your own tags.</li>
+            <li><strong>All fees are plus the cost of tags:</strong> — or bring your own tags.</li>
           </ul>
         </div>
       </section>
@@ -397,3 +414,4 @@
   </script>
 </body>
 </html>
+
