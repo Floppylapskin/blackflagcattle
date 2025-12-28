@@ -204,6 +204,34 @@
             margin-top: 24px;
             color: var(--muted);
         }
+        .tag-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 15px;
+}
+.tag-table th {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+  color: var(--red);
+  font-family: "Rye", serif;
+  letter-spacing: 0.05em;
+}
+.tag-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+}
+.tag-table .category {
+  font-weight: bold;
+  color: var(--gold);
+  white-space: nowrap;
+}
+.tag-table tr:last-child td {
+  border-bottom: none;
+}
+
     </style>
 </head>
 
@@ -263,6 +291,32 @@
                     </div>
                 </div>
             </section>
+            
+<!-- Ritchey Ear Tag Colors Section -->
+<section class="section">
+  <div class="kicker">Ritchey Dual Colored Tag Colors</div>
+
+  <div class="card">
+    <table class="tag-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Color Combinations</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="category">White Middle</td>
+          <td>Red/White, Black/White, Green/White, Blue/White, Purple/White, Brown/White</td>
+        </tr>
+        <tr>
+          <td class="category">Black Middle</td>
+          <td>Yellow/Black, Turquoise/Black, Gold/Black, Orange/Black, Lt.Blue/Black, Lt.Green/Black, Pink/Black</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
             <!-- CONTACT -->
             <section class="section">
@@ -330,6 +384,7 @@
 
 </body>
 </html>
+
 
 
 
