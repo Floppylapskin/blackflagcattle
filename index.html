@@ -6,7 +6,7 @@
   <title>Black Flag Cattle | Services</title>
   <meta name="description" content="Black Flag Cattle: custom cattle tags, laser engraving, herd consultation, and seasonal items. Hermiston, Oregon." />
 
-  <!-- Pirate-themed title font -->
+  <!-- PIRATE FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
 
   <style>
@@ -24,138 +24,135 @@
 
     body{
       margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       background:var(--bg);
       color:var(--text);
-      line-height:1.5;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
     }
 
-    .wrap{max-width:1100px;margin:0 auto;padding:22px}
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:22px;
+    }
 
     header{
       display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:10px;
-      padding-bottom:14px;
-      border-bottom:1px solid var(--line);
+      justify-content:center;
       margin-bottom:18px;
     }
 
     .logo{
-      width:min(340px,80vw);
+      width:min(380px,90vw);
       filter:grayscale(1) brightness(10);
     }
 
-    /* Pirate font for headings + section titles */
-    h1,h2,h3,.kicker,.section-title,.hero-banner h2{
+    /* =========================
+       PIRATE TYPOGRAPHY
+       ========================= */
+    h1,h2,h3,.banner-text,.section-title{
       font-family:"Pirata One", serif;
-      letter-spacing:0.06em;
-    }
-
-    /* Bigger headings are gold; smaller titles are red */
-    h1, h2 { color: var(--gold); }
-    h3, .kicker, .section-title { color: var(--red); }
-
-    h1{
-      font-size:clamp(30px,4.2vw,44px);
-      margin:0 0 10px;
-    }
-
-    /* Section header like “Services”, “Fees & Lead Times”, etc. */
-    .section-title{
-      font-size:clamp(28px,4.5vw,44px);
-      margin:0 0 12px;
+      letter-spacing:0.08em;
       text-transform:uppercase;
     }
 
-    .kicker{
-      font-size:12px;
-      text-transform:uppercase;
-      margin-bottom:10px;
+    h1{color:var(--gold)}
+    h3,.section-title{color:var(--red)}
+
+    /* =========================
+       BIG FULL-WIDTH BANNER
+       ========================= */
+    .hero-banner{
+      width:100%;
+      background:#0b0b0d;
+      border:2px solid var(--line);
+      border-radius:22px;
+      padding:40px 20px;
+      margin-bottom:28px;
+      text-align:center;
     }
+
+    .banner-text{
+      color:var(--red);
+      font-size:clamp(32px,6vw,58px); /* ← THIS IS BIG */
+      line-height:1.2;
+      margin:0;
+    }
+
+    /* ========================= */
 
     .card{
       background:var(--card);
       border:1px solid var(--line);
       border-radius:18px;
-      padding:16px;
+      padding:18px;
     }
 
-    .section{padding:18px 0}
+    .section{padding:20px 0}
 
-    .hero{
+    .section-title{
+      font-size:clamp(32px,5vw,52px); /* BIG section headers */
+      margin-bottom:14px;
+    }
+
+    .grid{
       display:grid;
-      grid-template-columns:1fr;
+      grid-template-columns:repeat(3,1fr);
       gap:14px;
     }
 
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    @media(max-width:900px){.grid{grid-template-columns:1fr}}
-
-    .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    @media(max-width:900px){.two{grid-template-columns:1fr}}
+    @media(max-width:900px){
+      .grid{grid-template-columns:1fr}
+    }
 
     .muted{color:var(--muted)}
     strong{color:var(--gold)}
-    .list{padding-left:18px}
+    ul{padding-left:20px}
 
-    /* Full-width hero banner (the line you showed) */
-    .hero-banner{
+    /* =========================
+       TABLE
+       ========================= */
+    .tag-table{
       width:100%;
-      background:#0b0b0d;
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:22px 18px;
-      margin-bottom:18px;
-      text-align:center;
-    }
-    .hero-banner h2{
-      margin:0;
-      font-size:clamp(22px,3.5vw,34px);
-      color:var(--red);
-      letter-spacing:0.12em;
-      text-transform:uppercase;
+      border-collapse:collapse;
     }
 
-    /* Full-width title box (for Ritchey section header) */
-    .full-width-title{
-      width:100%;
-      background:#0b0b0d;
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:26px 18px;
-      margin-bottom:18px;
-      text-align:center;
+    .tag-table th,
+    .tag-table td{
+      padding:14px;
+      border-bottom:1px solid var(--line);
     }
-    .full-width-title h2{
-      margin:0;
-      font-size:clamp(34px,5vw,54px);
+
+    .tag-table th{
       color:var(--gold);
-      letter-spacing:0.10em;
-      text-transform:uppercase;
+      text-align:left;
+      font-family:"Pirata One", serif;
+      font-size:20px;
     }
 
-    /* CONTACT BAR */
+    .category{
+      color:var(--red);
+      font-family:"Pirata One", serif;
+      font-size:20px;
+      white-space:nowrap;
+    }
+
+    /* =========================
+       CONTACT
+       ========================= */
     .contact-grid{
       display:grid;
       grid-template-columns:1fr 1.2fr;
       gap:14px;
     }
-    @media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
 
-    .contact-people{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
+    @media(max-width:900px){
+      .contact-grid{grid-template-columns:1fr}
     }
-    @media(max-width:900px){.contact-people{grid-template-columns:1fr}}
 
     label{
       display:block;
-      font-size:13px;
+      margin:10px 0 6px;
       color:var(--muted);
-      margin:10px 0 6px
     }
 
     input,textarea{
@@ -164,213 +161,127 @@
       border-radius:14px;
       border:1px solid var(--line);
       background:#0b0b0d;
-      color:var(--text)
+      color:var(--text);
     }
+
     textarea{min-height:110px}
 
     .btn{
       margin-top:14px;
-      padding:12px 18px;
-      border-radius:14px;
+      padding:16px;
+      font-size:20px;
+      border-radius:16px;
       border:1px solid var(--line);
       background:var(--red);
       color:white;
       font-family:"Pirata One", serif;
-      letter-spacing:0.10em;
+      letter-spacing:0.12em;
       cursor:pointer;
       width:100%;
       text-transform:uppercase;
-      font-size:18px;
-    }
-
-    /* Ritchey table styling (was missing, which can make it “not show” visually) */
-    .tag-table{
-      width:100%;
-      border-collapse:separate;
-      border-spacing:0;
-      overflow:hidden;
-      border-radius:14px;
-      border:1px solid var(--line);
-      background:#0b0b0d;
-    }
-    .tag-table th,
-    .tag-table td{
-      padding:12px 12px;
-      border-bottom:1px solid var(--line);
-      vertical-align:top;
-      color:var(--text);
-    }
-    .tag-table th{
-      text-align:left;
-      color:var(--gold);
-      font-family:"Pirata One", serif;
-      letter-spacing:0.08em;
-      text-transform:uppercase;
-      background:#09090b;
-    }
-    .tag-table tr:last-child td{border-bottom:none}
-    .tag-table .category{
-      width:180px;
-      color:var(--red);
-      font-family:"Pirata One", serif;
-      letter-spacing:0.06em;
-      text-transform:uppercase;
-      white-space:nowrap;
     }
 
     footer{
       border-top:1px solid var(--line);
-      padding:20px 0;
-      margin-top:24px;
+      margin-top:28px;
+      padding:18px 0;
       color:var(--muted);
+      text-align:center;
     }
   </style>
 </head>
 
 <body>
   <div class="wrap">
+
     <header>
       <img src="logo.png" alt="Black Flag Cattle logo" class="logo">
     </header>
 
+    <!-- BIG FULL-WIDTH RED BANNER -->
+    <div class="hero-banner">
+      <h2 class="banner-text">
+        Custom Cattle Tags • Laser Engraving • Herd Consultation
+      </h2>
+    </div>
+
     <main>
 
-      <!-- HERO -->
-      <section class="hero">
-        <!-- Full-width banner box (bigger + pirate font) -->
-        <div class="hero-banner">
-          <h2>Custom Cattle Tags • Laser Engraving • Herd Consultation</h2>
-        </div>
-
+      <section class="section">
         <div class="card">
-          <h1>Built for ranch life: clear ID, clean engraving, practical support.</h1>
+          <h1>Built for ranch life</h1>
           <p class="muted">
-            We place a <strong>heavy emphasis on custom cattle tags</strong>
-            designed to read fast, stay consistent across your herd,
-            and hold up to real-world ranch conditions.
+            We place a <strong>heavy emphasis on custom cattle tags</strong> designed to read fast,
+            stay consistent across your herd, and hold up to real-world ranch conditions.
           </p>
         </div>
       </section>
 
-      <!-- FEES -->
       <section class="section">
         <div class="section-title">Fees & Lead Times</div>
         <div class="card">
-          <ul class="list muted">
+          <ul class="muted">
             <li><strong>$1.50 per side</strong> cattle tag engraving</li>
             <li><strong>$50 design mock-up fee</strong> — valid forever</li>
             <li><strong>Lead time:</strong> 1–2 weeks depending on quantity</li>
-            <li><strong>All fees are plus the cost of tags</strong> — or bring your own tags.</li>
+            <li><strong>All fees are plus the cost of tags</strong> — or bring your own tags</li>
           </ul>
         </div>
       </section>
 
-      <!-- SERVICES -->
       <section class="section">
         <div class="section-title">Services</div>
         <div class="grid">
-          <div class="card">
-            <h3>Custom Cattle Tags</h3>
-            <p class="muted">Clear numbering systems built for real working cattle.</p>
-          </div>
-          <div class="card">
-            <h3>Laser Engraving</h3>
-            <p class="muted">Tools, signage, plates, gifts, and ranch items.</p>
-          </div>
-          <div class="card">
-            <h3>Herd Consultation</h3>
-            <p class="muted">Practical, experience-based guidance.</p>
-          </div>
+          <div class="card"><h3>Custom Cattle Tags</h3></div>
+          <div class="card"><h3>Laser Engraving</h3></div>
+          <div class="card"><h3>Herd Consultation</h3></div>
         </div>
       </section>
 
-      <!-- Ritchey Ear Tag Colors Section -->
       <section class="section">
-        <!-- Full-width title box (big + pirate font) -->
-        <div class="full-width-title">
-          <h2>Ritchey Dual Colored Tag Colors</h2>
-        </div>
-
+        <div class="section-title">Ritchey Dual Colored Tags</div>
         <div class="card">
           <table class="tag-table">
-            <thead>
-              <tr>
-                <th>Category</th>
-                <th>Color Combinations</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="category">White Middle</td>
-                <td>Red/White, Black/White, Green/White, Blue/White, Lt.Blue/White</td>
-              </tr>
-              <tr>
-                <td class="category">Black Middle</td>
-                <td>Yellow/Black, Turquoise/Black, Gold/Black, Orange/Black, Lt.Blue/Black, Lt.Green/Black, Pink/Black</td>
-              </tr>
-            </tbody>
+            <tr>
+              <th>Category</th>
+              <th>Colors</th>
+            </tr>
+            <tr>
+              <td class="category">White Middle</td>
+              <td>Red, Black, Green, Blue, Lt. Blue</td>
+            </tr>
+            <tr>
+              <td class="category">Black Middle</td>
+              <td>Yellow, Turquoise, Gold, Orange, Lt. Blue, Lt. Green, Pink</td>
+            </tr>
           </table>
         </div>
       </section>
 
-      <!-- CONTACT -->
       <section class="section">
         <div class="section-title">Contact</div>
-
         <div class="card">
-          <div class="contact-grid">
+          <form action="https://formspree.io/f/xjgvrrbv" method="POST">
+            <label>Name</label>
+            <input name="name" required>
 
-            <!-- PEOPLE -->
-            <div class="contact-people">
-              <div class="card">
-                <h3>Randy Peterson</h3>
-                <p class="muted">Engraving / Other</p>
-                <p class="muted">541-701-7773<br>blackflagcattle@gmail.com</p>
-              </div>
+            <label>Email</label>
+            <input type="email" name="email" required>
 
-              <div class="card">
-                <h3>Abby Peterson</h3>
-                <p class="muted">Cattle / Herd Consultation</p>
-                <p class="muted">541-701-5808<br>apatch@vt.edu</p>
-              </div>
-            </div>
+            <label>Message</label>
+            <textarea name="message" required></textarea>
 
-            <!-- FORM -->
-            <div>
-              <h3>Send a Message</h3>
-              <p class="muted" style="font-size:13px">
-                No online sales — message us for quotes and layout help.
-              </p>
-
-              <form action="https://formspree.io/f/xjgvrrbv" method="POST">
-                <label>Name</label>
-                <input type="text" name="name" required>
-
-                <label>Email</label>
-                <input type="email" name="email" required>
-
-                <label>Phone (optional)</label>
-                <input type="tel" name="phone">
-
-                <label>Message</label>
-                <textarea name="message" required></textarea>
-
-                <!-- Honeypot spam trap -->
-                <input type="text" name="_gotcha" style="display:none">
-
-                <button class="btn" type="submit">Send Message</button>
-              </form>
-            </div>
-
-          </div>
+            <button class="btn">Send Message</button>
+          </form>
         </div>
       </section>
 
     </main>
 
     <footer>
-      © <span id="year"></span> Black Flag Cattle — Service-based, no online sales
+      © <span id="year"></span> Black Flag Cattle
     </footer>
+
   </div>
 
   <script>
